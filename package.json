@@ -1,0 +1,12 @@
+{
+  "name": "fcc-whoami",
+  "version": "1.0.0",
+  "description": "Request Header Parser project for FreeCodeCamp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Kieran Harding",
+  "license": "ISC",
+  "repository": "https://github.com/kieranharding/fcc-whoami.git"
+}
