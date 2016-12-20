@@ -11,7 +11,9 @@ const server = http.createServer((req, res) => {
 
   const software = req.headers['user-agent'].match(/\(([^\)]*)\)/)[1]
   const language = req.headers['accept-language'].slice(0,5)
-  const ipaddress = req.connection.remoteAddress
+  const ipaddress = req.headers['x-forwarded-for']
+    ? req.headers['x-forwarded-for'].split(',').slice(-1)
+    : req.connection.remoteAddress
 
   let result = {
     "ipaddress": ipaddress,
